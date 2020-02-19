@@ -1,6 +1,6 @@
 # PLEASE READ!!!!
 
-This repostitory will contain various projects that I code up, ranging from HTML to C++.
+This repostitory will contain various projects that I code up and am willing to share, ranging from HTML to C++.
 
 For codes in C++, copy and paste them here to run them: http://cpp.sh/
 
