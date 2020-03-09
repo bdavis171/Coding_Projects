@@ -1,5 +1,8 @@
 //sanity
-console.log('script.js loaded');
+console.log('pokebtl1-script.js loaded');
+
+//reference the elements needed
+
 
 //create an object for typholsion with the following properties: name, type, hp,atk,def,sp_atk,sp_def,,spd,move1,move2,move3,move4
 const typholsion = {
