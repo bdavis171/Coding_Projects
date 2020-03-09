@@ -9,30 +9,39 @@
 </head>
 
 <body>
-   <div class="container">
-       <header>
-           <h1>Pokemon Battle #1: Typhlosion vs. Blastoise</h1>
-       </header>
-       <section>
-           <div id="typhlosion-hp">
-               <p><strong>Typhlosion</strong></p>
-               <p id="ty-hp">HP: 297/297</p>
-           </div>
-           <img src="./typhlosion-back.gif" alt="typhlosion-back" id="typhlosion">
-           <div id="blastoise-hp">
-               <p><strong>Blastoise</strong></p>
-               <p id="blast-hp">HP: 299/299</p>
-           </div>
-           <img src="./blastoise-front.gif" alt="blastoise-front" id="blastoise">
-       </section>
-       <button id="move1">[Move 1]</button>
-       <button id="move2">[Move 2]</button>
-       <button id="move3">[Move 3]</button>
-       <button id="move4">[Move 4]</button>
-       <footer>
-           <h4>Designed by: Brandon Davis</h4>
-       </footer>
-   </div>
+    <div class="container">
+        <header>
+            <h1>Pokemon Battle #1: Typhlosion vs. Blastoise</h1>
+        </header>
+        <section>
+            <div id="typhlosion-hp">
+                <p><strong>Typhlosion</strong> <span id="ty-status"></span></p>
+                <p id="ty-hp">HP: 297/297</p>
+                <p id="ty-buffs-debuffs"></p>
+
+            </div>
+            <img src="./typhlosion-back.gif" alt="typhlosion-back" id="typhlosion">
+            <div id="blastoise-hp">
+                <p><strong>Blastoise</strong> <span id="blast-status"></span></p>
+                <p id="blast-hp">HP: 299/299</p>
+                <p id="blast-buffs-debuffs"></p>
+
+            </div>
+            <img src="./blastoise-front.gif" alt="blastoise-front" id="blastoise">
+        </section>
+        <button id="move1">[Move 1]</button>
+
+        <button id="move2">[Move 2]</button>
+        <button id="move3">[Move 3]</button>
+        <button id="move4">[Move 4]</button>
+        <footer>
+            <h4>Designed by: Brandon Davis</h4>
+        </footer>
+    </div>
+    <div id="move1-description" hidden></div>
+    <div id="move2-description"></div>
+    <div id="move3-description"></div>
+    <div id="move4-description"></div>
     <script src="./pokebtl1-script.js"></script>
 </body>
 
