@@ -150,7 +150,7 @@ const useFlamethrower = event => {//this is a special atttack move, use calculat
             //store the damage dealt into the damageToOpp variable using the appropriate modifiers
             damageToOpp = calculateSpDamage(typholsion.move1.pwr, typholsion.sp_atk, blastoise.sp_def) * (notVeryEff * criticalHit);
         } else {
-            damageToOpp = calculateSpDamage(typholsion.move1.pwr,typholsion.sp_atk,blastoise.sp_def) * notVeryEff;
+            damageToOpp = calculateSpDamage(typholsion.move1.pwr, typholsion.sp_atk, blastoise.sp_def) * notVeryEff;
         }
     }
 
@@ -160,7 +160,7 @@ const useFlamethrower = event => {//this is a special atttack move, use calculat
     blastoise.hp -= damageToOpp;
     blastHP.innerHTML = `HP: ${blastoise.hp}/299`;
     //generate a random between 1 and 4 and set it to blastTurn
-    blastTurn = 1//Math.round(3 * Math.random() + 1);
+    blastTurn = Math.round(3 * Math.random() + 1);
 
     //generate a number for moveAccuracy for blastoise's attacks
     moveAccuracy = Math.round(99 * Math.random() + 1);
@@ -170,7 +170,6 @@ const useFlamethrower = event => {//this is a special atttack move, use calculat
         if (moveAccuracy > blastoise.move1.acc) {
             alert('The attack missed...');
             damageReceived = 0;
-            console.log('no damage');
         }
         else {
             alert("It's super effective!")
@@ -179,23 +178,68 @@ const useFlamethrower = event => {//this is a special atttack move, use calculat
             if (criticalHitChance <= 6) {
                 alert('Critical Hit!');
                 //store damage received into the damageReceived variable using the appropriate modifiers
-                damageReceived = Math.round(((((((2 * 100) / 5) + 2) * blastoise.move1.pwr * (blastoise.sp_atk / typholsion.sp_def)) / 50) + 2) *
-                    (superEff * criticalHit));
-                console.log('critical');
+                damageReceived = calculateSpDamage(blastoise.move1.pwr, blastoise.sp_atk, typholsion.sp_def) * (superEff * criticalHit);
             }
             else {
-                damageReceived = Math.round(((((((2 * 100) / 5) + 2) * blastoise.move1.pwr * (blastoise.sp_atk / typholsion.sp_def)) / 50) + 2) *
-                    (superEff));
-                console.log('damage');
+                damageReceived = calculateSpDamage(blastoise.move1.pwr, blastoise.sp_atk, typholsion.sp_def) * (superEff);
             }
         }
 
-    } else if (blastTurn === 2) {
-
-    } else if (blastTurn === 3) {
-
-    } else {
-        
+    }
+    //have blastoise use it's move2 if blastTurn is 2
+    else if (blastTurn === 2) {//this is a special attack move, use calculateSpDamage to find the damage
+        alert(`${blastoise.name} used ${blastoise.move2.name}!`);
+        if (moveAccuracy > blastoise.move2.acc) {
+            alert('The attack missed...');
+            damageReceived = 0;
+        }
+        else {
+            criticalHitChance = Math.round(99 * Math.random() + 1);
+            if (criticalHitChance <= 6) {
+                alert('Critical Hit!');
+                damageReceived = calculateSpDamage(blastoise.move2.pwr, blastoise.sp_atk, typholsion.sp_def) * (criticalHit);
+            }
+            else {
+                damageReceived = calculateSpDamage(blastoise.move2.pwr, blastoise.sp_atk, typholsion.sp_def);
+            }
+        }
+    }
+    //have blastoise use it's move3 if blastTurn is 3
+    else if (blastTurn === 3) {//this is a special attack move, use calculateSpDamage to find the damage
+        alert(`${blastoise.name} used ${blastoise.move3.name}!`);
+        if (moveAccuracy > blastoise.move3.acc) {
+            alert('The attack missed...');
+            damageReceived = 0;
+        }
+        else {
+            alert('Not very effective!')
+            criticalHitChance = Math.round(99 * Math.random() + 1);
+            if (criticalHitChance <= 6) {
+                alert('Critical Hit!');
+                damageReceived = calculateSpDamage(blastoise.move3.pwr, blastoise.sp_atk, typholsion.sp_def) * (criticalHit * notVeryEff);
+            }
+            else {
+                damageReceived = calculateSpDamage(blastoise.move3.pwr, blastoise.sp_atk, typholsion.sp_def) * notVeryEff;
+            }
+        }
+    }
+    //have blastoise use it's move4 if blastTurn is 4
+    else {//this is a special attack move, use calculateSpDamage to find the damage
+        alert(`${blastoise.name} used ${blastoise.move4.name}!`);
+        if (moveAccuracy > blastoise.move4.acc) {
+            alert('The attack missed...');
+            damageReceived = 0;
+        }
+        else {
+            criticalHitChance = Math.round(99 * Math.random() + 1);
+            if (criticalHitChance <= 6) {
+                alert('Critical Hit!');
+                damageReceived = calculateSpDamage(blastoise.move4.pwr, blastoise.sp_atk, typholsion.sp_def) * (criticalHit);
+            }
+            else {
+                damageReceived = calculateSpDamage(blastoise.move4.pwr, blastoise.sp_atk, typholsion.sp_def);
+            }
+        }
     }
 
     //reflect the changes to typhlosion's hp
@@ -213,7 +257,7 @@ const useFlamethrower = event => {//this is a special atttack move, use calculat
 
 //Create a function to add the description of flamethrower to the move1Btn and show it
 const flamethrowerDescription = event => {
-    move1Des.innerText = `${typholsion.move1.name}\nType: ${typholsion.move1.type}\nPower: ${typholsion.move1.pwr}\n\nThe target is scorched with an intense blast of fire. This may leave the target burned.`;
+    move1Des.innerText = `${typholsion.move1.name}\nType: ${typholsion.move1.type}\nPower: ${typholsion.move1.pwr}\n\nThe target is scorched with an intense blast of fire.`;
     move1Des.removeAttribute('hidden');
 }
 
