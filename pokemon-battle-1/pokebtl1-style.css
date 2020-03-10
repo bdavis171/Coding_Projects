@@ -72,6 +72,19 @@ section {
     position: absolute; bottom: -11%; left: 6%;
 }
 
+#move2-description{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: lightgray;
+    width: 200px;
+    height: auto;
+    padding: 1%;
+    position: absolute; bottom: -11%; left: 79%;
+}
+
+#move3-description{}
+
+#move4-description{}
 
 
 #move2 {

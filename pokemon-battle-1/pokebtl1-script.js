@@ -248,6 +248,11 @@ const useFlamethrower = event => {//this is a special atttack move, use calculat
 
 }
 
+//create a function to use move2 similar to the previous function when clicked
+const useWildCharge = event => {
+    alert(`${typholsion.name} used ${typholsion.move2.name}!`);
+    moveAccuracy = Math.round(99 * Math.random() + 1);
+}
 
 
 
@@ -261,9 +266,15 @@ const flamethrowerDescription = event => {
     move1Des.removeAttribute('hidden');
 }
 
+//create a function to add the description of wild charge to the move2Btn and show it
+const wildChargeDescription = event => {
+    move2Des.innerText = `${typholsion.move2.name}\nType: ${typholsion.move2.type}\nPower: ${typholsion.move2.pwr}\n\nThe user shrouds itself in electricity and smashes into its target. This also damages the user a little.`;
+    move2Des.removeAttribute('hidden');
+}
 //create a function to hide the description of moves
 const hideMoveDescription = event => {
     move1Des.setAttribute('hidden', true);
+    move2Des.setAttribute('hidden',true);
 }
 
 //add the useFlamethrower function to the move1Btn as an event 
@@ -272,3 +283,7 @@ move1Btn.addEventListener('click', useFlamethrower);
 move1Btn.addEventListener('mouseover', flamethrowerDescription);
 //add the hideMoveDescription to the move1Btn as an event when the mouse is not hovering over the button
 move1Btn.addEventListener('mouseout', hideMoveDescription);
+//add the wildChargeDescription to the move2Btn as an event when mouse hovers over
+move2Btn.addEventListener('mouseover',wildChargeDescription);
+//add the hideMoveDescription to the move2Btn as an event when mouse is not over it
+move2Btn.addEventListener('mouseout',hideMoveDescription);
