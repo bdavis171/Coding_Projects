@@ -371,10 +371,17 @@ const wildChargeDescription = event => {
     move2Des.innerText = `${typholsion.move2.name}\nType: ${typholsion.move2.type}\nPower: ${typholsion.move2.pwr}\n\nThe user shrouds itself in electricity and smashes into its target. This also damages the user a little.`;
     move2Des.removeAttribute('hidden');
 }
+
+//create a funciton to add the description of extrasensory to the move3Btn and show it
+const extrasensoryDescription = event => {
+    move3Des.innerText = `${typholsion.move3.name}\nType: ${typholsion.move3.type}\nPower: ${typholsion.move3.pwr}\n\nThe user attacks with an odd, unseeable power. This may also make the target flinch.`;
+    move3Des.removeAttribute('hidden');
+}
 //create a function to hide the description of moves
 const hideMoveDescription = event => {
     move1Des.setAttribute('hidden', true);
     move2Des.setAttribute('hidden',true);
+    move3Des.setAttribute('hidden',true);
 }
 
 //add the useFlamethrower function to the move1Btn as an event 
@@ -390,4 +397,9 @@ move2Btn.addEventListener('click',useWildCharge);
 move2Btn.addEventListener('mouseover',wildChargeDescription);
 //add the hideMoveDescription to the move2Btn as an event when mouse is not over it
 move2Btn.addEventListener('mouseout',hideMoveDescription);
+
+//add the extrasensoryDescription to the move3Btn as an event when mouse hovers over
+move3Btn.addEventListener('mouseover',extrasensoryDescription);
+//add the hideMoveDescription to the move3Btn
+move3Btn.addEventListener('mouseout',hideMoveDescription);
 
