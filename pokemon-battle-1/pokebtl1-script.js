@@ -128,7 +128,7 @@ const calculateSpDamage = (power, userSpAtk, targetSpDef) => {
 }
 //create a function to calculate damage for physical attacks
 const calculatePhyDamage = (power, userAtk, targetDef) => {
-    return Math.round(((((((2 * 100) / 5) + 2) * power * (userAtk / targetDef)) / 50) + 2));
+    return Math.ceil(((((((2 * 100) / 5) + 2) * power * (userAtk / targetDef)) / 50) + 2));
 }
 //create a function to use move1 when the move1Btn is clicked
 const useFlamethrower = event => {//this is a special atttack move, use calculateSpDamage to find the damage
@@ -249,9 +249,109 @@ const useFlamethrower = event => {//this is a special atttack move, use calculat
 }
 
 //create a function to use move2 similar to the previous function when clicked
-const useWildCharge = event => {
+const useWildCharge = event => {//This is a physical attacking move, use calculatePhyDamage to find the damage
     alert(`${typholsion.name} used ${typholsion.move2.name}!`);
     moveAccuracy = Math.round(99 * Math.random() + 1);
+    if (moveAccuracy > typholsion.move2.acc) {
+        alert('The attack missed...');
+    }
+    else {
+        alert("It's super effective!");
+        criticalHitChance = Math.round(99 * Math.random() + 1);
+        if (criticalHitChance <= 6) {
+            alert('Critical Hit!');
+            damageToOpp = calculatePhyDamage(typholsion.move2.pwr,typholsion.atk,blastoise.def) * (criticalHit * superEff);
+            alert('Typholsion took damage due to recoil!');
+            typholsion.hp -= Math.ceil((damageToOpp * 0.25));
+            tyHP.innerHTML = `HP: ${typholsion.hp}/322`;
+        }
+        else
+        damageToOpp = calculatePhyDamage(typholsion.move2.pwr,typholsion.atk,blastoise.def) *  superEff;
+        alert('Typholsion took damage due to recoil!');
+        typholsion.hp -= (damageToOpp * 0.25);
+        tyHP.innerHTML = `HP: ${typholsion.hp}/322`;
+    }
+    blastoise.hp -= damageToOpp;
+    blastHP.innerHTML = `HP: ${blastoise.hp}/299`;
+    
+    blastTurn = Math.round(3 * Math.random() + 1);
+
+   
+    moveAccuracy = Math.round(99 * Math.random() + 1);
+    if (blastTurn === 1) {
+        alert(`${blastoise.name} used ${blastoise.move1.name}!`);
+        if (moveAccuracy > blastoise.move1.acc) {
+            alert('The attack missed...');
+            damageReceived = 0;
+        }
+        else {
+            alert("It's super effective!")
+            criticalHitChance = Math.round(99 * Math.random() + 1);
+            if (criticalHitChance <= 6) {
+                alert('Critical Hit!');
+                damageReceived = calculateSpDamage(blastoise.move1.pwr, blastoise.sp_atk, typholsion.sp_def) * (superEff * criticalHit);
+            }
+            else {
+                damageReceived = calculateSpDamage(blastoise.move1.pwr, blastoise.sp_atk, typholsion.sp_def) * (superEff);
+            }
+        }
+
+    }
+    else if (blastTurn === 2) {
+        alert(`${blastoise.name} used ${blastoise.move2.name}!`);
+        if (moveAccuracy > blastoise.move2.acc) {
+            alert('The attack missed...');
+            damageReceived = 0;
+        }
+        else {
+            criticalHitChance = Math.round(99 * Math.random() + 1);
+            if (criticalHitChance <= 6) {
+                alert('Critical Hit!');
+                damageReceived = calculateSpDamage(blastoise.move2.pwr, blastoise.sp_atk, typholsion.sp_def) * (criticalHit);
+            }
+            else {
+                damageReceived = calculateSpDamage(blastoise.move2.pwr, blastoise.sp_atk, typholsion.sp_def);
+            }
+        }
+    }
+    else if (blastTurn === 3) {
+        alert(`${blastoise.name} used ${blastoise.move3.name}!`);
+        if (moveAccuracy > blastoise.move3.acc) {
+            alert('The attack missed...');
+            damageReceived = 0;
+        }
+        else {
+            alert('Not very effective!')
+            criticalHitChance = Math.round(99 * Math.random() + 1);
+            if (criticalHitChance <= 6) {
+                alert('Critical Hit!');
+                damageReceived = calculateSpDamage(blastoise.move3.pwr, blastoise.sp_atk, typholsion.sp_def) * (criticalHit * notVeryEff);
+            }
+            else {
+                damageReceived = calculateSpDamage(blastoise.move3.pwr, blastoise.sp_atk, typholsion.sp_def) * notVeryEff;
+            }
+        }
+    }
+    else {
+        alert(`${blastoise.name} used ${blastoise.move4.name}!`);
+        if (moveAccuracy > blastoise.move4.acc) {
+            alert('The attack missed...');
+            damageReceived = 0;
+        }
+        else {
+            criticalHitChance = Math.round(99 * Math.random() + 1);
+            if (criticalHitChance <= 6) {
+                alert('Critical Hit!');
+                damageReceived = calculateSpDamage(blastoise.move4.pwr, blastoise.sp_atk, typholsion.sp_def) * (criticalHit);
+            }
+            else {
+                damageReceived = calculateSpDamage(blastoise.move4.pwr, blastoise.sp_atk, typholsion.sp_def);
+            }
+        }
+    }
+
+    typholsion.hp -= damageReceived;
+    tyHP.innerHTML = `HP: ${typholsion.hp}/322`;
 }
 
 
@@ -283,7 +383,11 @@ move1Btn.addEventListener('click', useFlamethrower);
 move1Btn.addEventListener('mouseover', flamethrowerDescription);
 //add the hideMoveDescription to the move1Btn as an event when the mouse is not hovering over the button
 move1Btn.addEventListener('mouseout', hideMoveDescription);
+
+//add the userWildCharge function to the move2Btn as an event
+move2Btn.addEventListener('click',useWildCharge);
 //add the wildChargeDescription to the move2Btn as an event when mouse hovers over
 move2Btn.addEventListener('mouseover',wildChargeDescription);
 //add the hideMoveDescription to the move2Btn as an event when mouse is not over it
 move2Btn.addEventListener('mouseout',hideMoveDescription);
+
