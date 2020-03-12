@@ -484,11 +484,18 @@ const extrasensoryDescription = event => {
     move3Des.innerText = `${typholsion.move3.name}\nType: ${typholsion.move3.type}\nPower: ${typholsion.move3.pwr}\n\nThe user attacks with an odd, unseeable power. This may also make the target flinch.`;
     move3Des.removeAttribute('hidden');
 }
+
+//create a function to add the description of brick break to the mve4Btn and show it
+const brickBreakDescription = event => {
+    move4Des.innerText = `${typholsion.move4.name}\nType: ${typholsion.move4.type}\nPower: ${typholsion.move4.pwr}\n\nThe user attacks with a swift chop.`;
+    move4Des.removeAttribute('hidden');
+}
 //create a function to hide the description of moves
 const hideMoveDescription = event => {
     move1Des.setAttribute('hidden', true);
     move2Des.setAttribute('hidden',true);
     move3Des.setAttribute('hidden',true);
+    move4Des.setAttribute('hidden',true);
 }
 
 //add the useFlamethrower function to the move1Btn as an event 
@@ -511,4 +518,11 @@ move3Btn.addEventListener('click', useExtrasensory);
 move3Btn.addEventListener('mouseover',extrasensoryDescription);
 //add the hideMoveDescription to the move3Btn
 move3Btn.addEventListener('mouseout',hideMoveDescription);
+
+//add the useBrickBreak function to the move4Btn as an event
+// move4Btn.addEventListener('click', useBrickBreak);
+//add the brickBreakDescription to the move4Btn as an event when mouse hovers over
+move4Btn.addEventListener('mouseover',brickBreakDescription);
+//add the hideMoveDescription to the move4tn
+move4Btn.addEventListener('mouseout',hideMoveDescription);
 
