@@ -46,7 +46,7 @@
 #keyblade-info {
   grid-column: 2;
   grid-row: 2;
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 1%;
   width: 200px;
   
@@ -55,19 +55,30 @@
 #keyblade-img {
   grid-column: 4;
   grid-row: 2;
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 1%;
  
 }
 
 .keyblade-list {
-  background-image: url('https://mcdn.wallpapersafari.com/medium/38/89/sfRduB.jpg');
-  background-size: 100% 100%;
+ border: 2px solid white;
   margin: 1%;
-  color: black;
+  color: white;
+  padding: 1%;
 }
 
 html{
   color: white;
   background-color: black;
+  background-image: url('https://mcdn.wallpapersafari.com/medium/55/4/8yB3uN.jpg');
+}
+
+#header{
+  border-bottom: 3px solid white;
+  padding-bottom: 1%;
+}
+
+#footer{
+  border-top: 3px solid white;
+  padding-top: 1%;
 }
