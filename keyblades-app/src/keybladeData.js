@@ -108,49 +108,49 @@ module.exports = [
         "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/6/64/Wishing_Lamp_KHII.png/revision/latest?cb=20110202214101"
     },
     {
-        "name":"",
+        "name":"Sweet Memories",
         "stats":{
             "str":0,
             "mag":0
         },
-        "description":"",
-        "img":""
+        "description":"Although it does not enhance attack strength, it increases the drop rate of items.",
+        "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/d/d3/Sweet_Memories_KHII.png/revision/latest?cb=20110202213039"
     },
     {
-        "name":"",
+        "name":"Guardian Soul",
         "stats":{
-            "str":0,
-            "mag":0
+            "str":5,
+            "mag":1
         },
-        "description":"",
-        "img":""
+        "description":"Has great strength, increasing the amount of damage dealt from Reaction Commands.",
+        "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/1/18/Guardian_Soul_KHII.png/revision/latest?cb=20100912204147"
     },
     {
-        "name":"",
+        "name":"Decisive Pumpkin",
         "stats":{
-            "str":0,
-            "mag":0
+            "str":6,
+            "mag":1
         },
-        "description":"",
-        "img":""
+        "description":"The greater number of combos landed, the more damage is dealt, leading to a strong finishing move!",
+        "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/0/0d/Decisive_Pumpkin_KHII.png/revision/latest?cb=20110106010345"
     },
     {
-        "name":"",
+        "name":"Gullwing",
         "stats":{
-            "str":0,
+            "str":3,
             "mag":0
         },
-        "description":"",
-        "img":""
+        "description":"Greatly increases the amount of experience gained when defeating an enemy at a critical moment.",
+        "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/f/f6/Gull_Wing_KHII.png/revision/latest?cb=20110202213152"
     },
     {
-        "name":"",
+        "name":"Sleeping Lion",
         "stats":{
-            "str":0,
-            "mag":0
+            "str":5,
+            "mag":3
         },
-        "description":"",
-        "img":""
+        "description":"Well-balanced with strength and magic, increasing maximum ground-based combos by 1.",
+        "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/7/76/Sleeping_Lion_KHII.png/revision/latest?cb=20110202213239"
     },
     {
         "name":"",
