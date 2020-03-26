@@ -12,6 +12,7 @@ class AppContainer extends Component {
         return (
             <Fragment>
                 <h1>Keyblades App</h1>
+                <div className="keyblade-list">
                 {keybladeData.map(
                     (keyblade, inx) => {
                         return (
@@ -30,6 +31,7 @@ class AppContainer extends Component {
                         )
                     }
                 )}
+                </div>
                 <h3>Designed By Brandon Davis</h3>
             </Fragment>
         );

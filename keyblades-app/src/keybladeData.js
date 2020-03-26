@@ -153,66 +153,66 @@ module.exports = [
         "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/7/76/Sleeping_Lion_KHII.png/revision/latest?cb=20110202213239"
     },
     {
-        "name":"",
+        "name":"Bond of Flame",
         "stats":{
-            "str":0,
-            "mag":0
+            "str":4,
+            "mag":4
         },
-        "description":"",
-        "img":""
+        "description":"Enhances magic to increase damage dealt by fire-based attacks.",
+        "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/4/43/Bond_of_Flame_KHII.png/revision/latest?cb=20110202213313"
     },
     {
-        "name":"",
+        "name":"Two Become One",
         "stats":{
-            "str":0,
-            "mag":0
+            "str":5,
+            "mag":4
         },
-        "description":"",
-        "img":""
+        "description":"A weapon of great strength and magic that has a special effect.",
+        "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/3/38/Two_Become_One_KHIIFM.png/revision/latest?cb=20110202213351"
     },
     {
-        "name":"",
+        "name":"Oblivion",
         "stats":{
-            "str":0,
-            "mag":0
+            "str":6,
+            "mag":2
         },
-        "description":"",
-        "img":""
+        "description":"Has great strength, and allows the Drive Gauge to restore quickly during MP Charge.",
+        "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/4/47/Oblivion_KH2.png/revision/latest?cb=20191014230259"
     },
     {
-        "name":"",
+        "name":"Fatal Crest",
         "stats":{
-            "str":0,
-            "mag":0
+            "str":3,
+            "mag":5
         },
-        "description":"",
-        "img":""
+        "description":"Increases strength during MP Charge and allows unlimited chaining of combos. When equipped, the combo finishing move is disabled.",
+        "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/e/e9/Fatal_Crest_KHII.png/revision/latest?cb=20110108205211"
     },
     {
-        "name":"",
+        "name":"Winner's Proof",
         "stats":{
-            "str":0,
-            "mag":0
+            "str":5,
+            "mag":7
         },
-        "description":"",
-        "img":""
+        "description":"Has high strength and holds an excellent magic power. When the enemies are defeated, experience points are not gained.",
+        "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/f/f1/Winner%27s_Proof_KHIIFM.png/revision/latest?cb=20110202213431"
     },
     {
-        "name":"",
+        "name":"Ultima Weapon",
         "stats":{
-            "str":0,
-            "mag":0
+            "str":6,
+            "mag":4
         },
-        "description":"",
-        "img":""
+        "description":"The Keyblade above all others, holding all power and will increase MP restoration rate, once all MP has been consumed.",
+        "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/8/88/Ultima_Weapon_KHII.png/revision/latest?cb=20110202213509"
     },
     {
-        "name":"",
+        "name":"Fenrir",
         "stats":{
-            "str":0,
-            "mag":0
+            "str":7,
+            "mag":1
         },
-        "description":"",
-        "img":""
+        "description":"Has great range and strength, but maximum ground and midair combos are decreased by 1.",
+        "img":"https://vignette.wikia.nocookie.net/kingdomhearts/images/0/09/Fenrir_KHII.png/revision/latest?cb=20100912203322"
     }
 ]
