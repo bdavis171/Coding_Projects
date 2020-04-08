@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Page7 from './Page7';
-import Page9 from './Page9';
+import Page12 from './Page12';
+import EndPage from './EndPage';
 
-class Page8 extends Component {
+class Page13 extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -25,22 +25,22 @@ class Page8 extends Component {
                 }
             },
 
-            ancientGuardian: {
+            mysteriousFigure: {
                 hp: 200,
                 atk1: {
-                    name: 'Guardian Force',
-                    min_dmg: 10,
-                    max_dmg: 16
+                    name: 'Ether Blades',
+                    min_dmg: 7,
+                    max_dmg: 10
                 },
                 atk2: {
-                    name: 'Gaia Force',
-                    min_dmg: 6,
-                    max_dmg: 13
+                    name: 'Soul Surge',
+                    min_dmg: 9,
+                    max_dmg: 16
                 },
                 atk3: {
-                    name: 'Rusted Force',
-                    min_dmg: 2,
-                    max_dmg: 18
+                    name: 'Divine Sword: Null',
+                    min_dmg: 7,
+                    max_dmg: 20
                 },
             },
 
@@ -75,9 +75,9 @@ class Page8 extends Component {
             this.setState({
                 battleLog: this.state.battleLog
             })
-            this.state.ancientGuardian.hp -= damageDealt;
+            this.state.mysteriousFigure.hp -= damageDealt;
             this.setState({
-                ancientGuardian: this.state.ancientGuardian
+                mysteriousFigure: this.state.mysteriousFigure
             })
 
             enemyAttackChance = Math.ceil(99 * Math.random() + 1);
@@ -87,8 +87,8 @@ class Page8 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.ancientGuardian.atk1.max_dmg - this.state.ancientGuardian.atk1.min_dmg) * Math.random() + this.state.ancientGuardian.atk1.min_dmg) * modifier);
-                logEntry = `The Ancient Guardian used ${this.state.ancientGuardian.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.mysteriousFigure.atk1.max_dmg - this.state.mysteriousFigure.atk1.min_dmg) * Math.random() + this.state.mysteriousFigure.atk1.min_dmg) * modifier);
+                logEntry = `The Mysterious Figure used ${this.state.mysteriousFigure.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -98,14 +98,14 @@ class Page8 extends Component {
                     player: this.state.player
                 })
             }
-            else if (enemyAttackChance > 60 && enemyAttackChance <= 80) {
+            else if (enemyAttackChance > 60 && enemyAttackChance <= 130) {
                 let criticalChance = Math.ceil(99 * Math.random() + 1);
                 if (criticalChance <= 5) {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.ancientGuardian.atk2.max_dmg - this.state.ancientGuardian.atk2.min_dmg) * Math.random() + this.state.ancientGuardian.atk2.min_dmg) * modifier);
-                logEntry = `The Ancient Guardian used ${this.state.ancientGuardian.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.mysteriousFigure.atk2.max_dmg - this.state.mysteriousFigure.atk2.min_dmg) * Math.random() + this.state.mysteriousFigure.atk2.min_dmg) * modifier);
+                logEntry = `The Mysterious Figure used ${this.state.mysteriousFigure.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -121,8 +121,8 @@ class Page8 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.ancientGuardian.atk3.max_dmg - this.state.ancientGuardian.atk3.min_dmg) * Math.random() + this.state.ancientGuardian.atk3.min_dmg) * modifier);
-                logEntry = `The Ancient Guardian used ${this.state.ancientGuardian.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.mysteriousFigure.atk3.max_dmg - this.state.mysteriousFigure.atk3.min_dmg) * Math.random() + this.state.mysteriousFigure.atk3.min_dmg) * modifier);
+                logEntry = `The Mysterious Figure used ${this.state.mysteriousFigure.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -148,9 +148,9 @@ class Page8 extends Component {
             this.setState({
                 battleLog: this.state.battleLog
             })
-            this.state.ancientGuardian.hp -= damageDealt;
+            this.state.mysteriousFigure.hp -= damageDealt;
             this.setState({
-                ancientGuardian: this.state.ancientGuardian
+                mysteriousFigure: this.state.mysteriousFigure
             })
 
             enemyAttackChance = Math.ceil(99 * Math.random() + 1);
@@ -160,8 +160,8 @@ class Page8 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.ancientGuardian.atk1.max_dmg - this.state.ancientGuardian.atk1.min_dmg) * Math.random() + this.state.ancientGuardian.atk1.min_dmg) * modifier);
-                logEntry = `The Ancient Guardian used ${this.state.ancientGuardian.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.mysteriousFigure.atk1.max_dmg - this.state.mysteriousFigure.atk1.min_dmg) * Math.random() + this.state.mysteriousFigure.atk1.min_dmg) * modifier);
+                logEntry = `The Mysterious Figure used ${this.state.mysteriousFigure.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -171,14 +171,14 @@ class Page8 extends Component {
                     player: this.state.player
                 })
             }
-            else if (enemyAttackChance > 60 && enemyAttackChance <= 80) {
+            else if (enemyAttackChance > 60 && enemyAttackChance <= 130) {
                 let criticalChance = Math.ceil(99 * Math.random() + 1);
                 if (criticalChance <= 5) {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.ancientGuardian.atk2.max_dmg - this.state.ancientGuardian.atk2.min_dmg) * Math.random() + this.state.ancientGuardian.atk2.min_dmg) * modifier);
-                logEntry = `The Ancient Guardian used ${this.state.ancientGuardian.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.mysteriousFigure.atk2.max_dmg - this.state.mysteriousFigure.atk2.min_dmg) * Math.random() + this.state.mysteriousFigure.atk2.min_dmg) * modifier);
+                logEntry = `The Mysterious Figure used ${this.state.mysteriousFigure.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -194,8 +194,8 @@ class Page8 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.ancientGuardian.atk3.max_dmg - this.state.ancientGuardian.atk3.min_dmg) * Math.random() + this.state.ancientGuardian.atk3.min_dmg) * modifier);
-                logEntry = `The Ancient Guardian used ${this.state.ancientGuardian.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.mysteriousFigure.atk3.max_dmg - this.state.mysteriousFigure.atk3.min_dmg) * Math.random() + this.state.mysteriousFigure.atk3.min_dmg) * modifier);
+                logEntry = `The Mysterious Figure used ${this.state.mysteriousFigure.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -221,9 +221,9 @@ class Page8 extends Component {
             this.setState({
                 battleLog: this.state.battleLog
             })
-            this.state.ancientGuardian.hp -= damageDealt;
+            this.state.mysteriousFigure.hp -= damageDealt;
             this.setState({
-                ancientGuardian: this.state.ancientGuardian
+                mysteriousFigure: this.state.mysteriousFigure
             })
 
             enemyAttackChance = Math.ceil(99 * Math.random() + 1);
@@ -233,8 +233,8 @@ class Page8 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.ancientGuardian.atk1.max_dmg - this.state.ancientGuardian.atk1.min_dmg) * Math.random() + this.state.ancientGuardian.atk1.min_dmg) * modifier);
-                logEntry = `The Ancient Guardian used ${this.state.ancientGuardian.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.mysteriousFigure.atk1.max_dmg - this.state.mysteriousFigure.atk1.min_dmg) * Math.random() + this.state.mysteriousFigure.atk1.min_dmg) * modifier);
+                logEntry = `The Mysterious Figure used ${this.state.mysteriousFigure.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -244,14 +244,14 @@ class Page8 extends Component {
                     player: this.state.player
                 })
             }
-            else if (enemyAttackChance > 60 && enemyAttackChance <= 80) {
+            else if (enemyAttackChance > 60 && enemyAttackChance <= 130) {
                 let criticalChance = Math.ceil(99 * Math.random() + 1);
                 if (criticalChance <= 5) {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.ancientGuardian.atk2.max_dmg - this.state.ancientGuardian.atk2.min_dmg) * Math.random() + this.state.ancientGuardian.atk2.min_dmg) * modifier);
-                logEntry = `The Ancient Guardian used ${this.state.ancientGuardian.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.mysteriousFigure.atk2.max_dmg - this.state.mysteriousFigure.atk2.min_dmg) * Math.random() + this.state.mysteriousFigure.atk2.min_dmg) * modifier);
+                logEntry = `The Mysterious Figure used ${this.state.mysteriousFigure.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -267,8 +267,8 @@ class Page8 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.ancientGuardian.atk3.max_dmg - this.state.ancientGuardian.atk3.min_dmg) * Math.random() + this.state.ancientGuardian.atk3.min_dmg) * modifier);
-                logEntry = `The Ancient Guardian used ${this.state.ancientGuardian.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.mysteriousFigure.atk3.max_dmg - this.state.mysteriousFigure.atk3.min_dmg) * Math.random() + this.state.mysteriousFigure.atk3.min_dmg) * modifier);
+                logEntry = `The Mysterious Figure used ${this.state.mysteriousFigure.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -288,21 +288,21 @@ class Page8 extends Component {
         let nextPage;
         if (this.state.player.hp <= 0) {
             alert('You lose...');
-            nextPage = <Page7 />;
+            nextPage = <Page12 />;
         }
-        else if (this.state.ancientGuardian.hp <= 0) {
+        else if (this.state.mysteriousFigure.hp <= 0) {
             alert('You win!!!');
-            nextPage = <Page9 />
+            nextPage = <EndPage />
         }
         else {
             nextPage = <div className='battle-container'>
 
                 <div className="battle-header">
-                <h1>Platinum City - Square</h1>
+                <h1>Ruins of Naught - Void Garden</h1>
                 </div>
 
                 <div className="battle-description">
-                    <p>You see a giant guardian appear before you. It seems to be protecting the entrance to the ruins. You'll have to defeat it to continue onward.</p>
+                    <p>The mysterious figure appears before you. They congradulate you on making it through the labyrinth to them, but claim that you will not defeat them. Show them what you're made of!</p>
                 </div>
 
                 <div className="player-hp">
@@ -310,7 +310,7 @@ class Page8 extends Component {
                 </div>
 
                 <div className="enemy-hp">
-                    <h4>Ancient Guardian: {this.state.ancientGuardian.hp}/200</h4>
+                    <h4>Mysterious Figure: {this.state.mysteriousFigure.hp}/200</h4>
                 </div>
 
                 <div className="battle-buttons">                    
@@ -341,4 +341,4 @@ class Page8 extends Component {
     }
 }
 
-export default Page8;
+export default Page13;

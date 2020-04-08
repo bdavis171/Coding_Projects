@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import Page8 from './Page8';
-import Page6 from './Page6';
-import Page16 from './Page16';
-import Page20 from './Page20';
+import Page12 from './Page12';
+import Page32 from './Page32';
+import Page10 from './Page10';
 
-class Page7 extends Component {
+class Page11 extends Component {
     constructor(props) {
         super(props);
         this.state = {
             goesNorth: false,
             goesSouth: false,
-            goesEast: false,
-            goesWest: false
+            goesEast: false
         }
     }
 
@@ -20,7 +18,7 @@ class Page7 extends Component {
             this.setState({
                 goesNorth: true,
                 goesSouth: false,
-                goesWest: false,
+            
                 goesEast: false
             })
         }
@@ -28,23 +26,16 @@ class Page7 extends Component {
             this.setState({
                 goesNorth: false,
                 goesSouth: true,
-                goesWest: false,
+              
                 goesEast: false
             })
         }
-        else if (event.target.name === 'west') {
-            this.setState({
-                goesNorth: false,
-                goesSouth: false,
-                goesWest: true,
-                goesEast: false
-            })
-        }
+    
         else if (event.target.name === 'east') {
             this.setState({
                 goesNorth: false,
                 goesSouth: false,
-                goesWest: false,
+                
                 goesEast: true
             })
         }
@@ -53,32 +44,30 @@ class Page7 extends Component {
         let nextPage;
 
         if (this.state.goesNorth) {
-            nextPage = <Page20 />;
+            nextPage = <Page10 />;
         }
         else if (this.state.goesSouth) {
-            nextPage = <Page16 />;
+            nextPage = <Page32 />;
         }
-        else if (this.state.goesWest) {
-            nextPage = <Page6 />;
-        }
+        
         else if (this.state.goesEast){
-            nextPage = <Page8/>
+            nextPage = <Page12/>
         }
         else {
             nextPage = <div className="basic-container">
                 <div className="basic-header">
-                    <h1>Platinum City - Forest Entrance</h1>
+                    <h1>Ruins of Naught</h1>
                 </div>
 
                 <div className="basic-description">
-                    <p>You've arrived at a busy city with lights everywhere. A lady tells you about some ruins to the south, but warns you of a guardian protecting the entrance. You wonder if you'll find the mysterious figure there.</p>
+                    <p>As you go deeper into the ruins, you begin to sense something familiar. You're soul must be near by, but that also means that the mysterious figure is nearby.</p>
                 </div>
 
                 <div className="basic-buttons">
                     <button name='north' onClick={this.handleDirection}>Go North</button>
                     <button name='south' onClick={this.handleDirection}>Go South</button>
                     <button name='east' onClick={this.handleDirection}>Go East</button>
-                    <button name='west' onClick={this.handleDirection}>Go West</button>
+                    
                 </div>
             </div>
         }
@@ -90,4 +79,4 @@ class Page7 extends Component {
     }
 }
 
-export default Page7;
+export default Page11;

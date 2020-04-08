@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StartPage from './StartPage';
+import Page9 from './Page9';
 
 
 class AppContainer extends Component {
@@ -10,7 +10,8 @@ class AppContainer extends Component {
     render() { 
         return ( 
             <div>
-                <StartPage/>
+                {/* <StartPage/> */}
+               <Page9/>
                 <footer>
                     <h3>Designed by Brandon Davis</h3>
                 </footer>

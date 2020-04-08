@@ -1,55 +1,62 @@
 import React, { Component } from 'react';
-import Page5 from './Page5';
-import Page7 from './Page7';
+import Page9 from './Page9';
+import Page11 from './Page11';
 
-class Page6 extends Component {
+
+class Page10 extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            goesNorth: false,
+
+            goesSouth: false,
             goesEast: false
         }
     }
 
     handleDirection = (event) => {
-        if (event.target.name === 'north') {
+        if (event.target.name === 'south') {
             this.setState({
-                goesNorth: true,
+
+                goesSouth: true,
+
                 goesEast: false
             })
         }
+
         else if (event.target.name === 'east') {
             this.setState({
-                goesNorth: false,
+
+                goesSouth: false,
+
                 goesEast: true
             })
         }
     }
-
     render() {
         let nextPage;
 
-        if (this.state.goesNorth) {
-            nextPage = <Page5 />
+        if (this.state.goesSouth) {
+            nextPage = <Page11 />;
         }
+
         else if (this.state.goesEast) {
-            nextPage = <Page7 />;
+            nextPage = <Page9 />
         }
         else {
             nextPage = <div className="basic-container">
                 <div className="basic-header">
-                    <h1>Dawn Break Forest - Deep Forest</h1>
+                    <h1>Ruins of Naught</h1>
                 </div>
 
                 <div className="basic-description">
-                    <p>You see lights in the direction of the tall buildings.</p>
+                    
                 </div>
 
                 <div className="basic-buttons">
-                    <button name='north' onClick={this.handleDirection}>Go North</button>
-             
+         
+                    <button name='south' onClick={this.handleDirection}>Go South</button>
                     <button name='east' onClick={this.handleDirection}>Go East</button>
-                    
+
                 </div>
             </div>
         }
@@ -61,4 +68,4 @@ class Page6 extends Component {
     }
 }
 
-export default Page6;
+export default Page10;
