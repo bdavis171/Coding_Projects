@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Page12 from './Page12';
-import Page32 from './Page32';
+import Page26 from './Page26';
 import Page10 from './Page10';
 
 class Page11 extends Component {
@@ -47,7 +47,7 @@ class Page11 extends Component {
             nextPage = <Page10 />;
         }
         else if (this.state.goesSouth) {
-            nextPage = <Page32 />;
+            nextPage = <Page26 />;
         }
         
         else if (this.state.goesEast){

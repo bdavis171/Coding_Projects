@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import Page3 from './Page3';
+import Page21 from './Page21';
 
 
-class Page17 extends Component {
+class Page22 extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            goesWest: false
+            goesSouth: false
          }
     }
 
     // handle directions
     handleDirection = (event) => {
-        if (event.target.name === 'west'){
+        if (event.target.name === 'south'){
             this.setState({
-                goesWest: true
+                goesSouth: true
             })
         }
         
@@ -23,13 +23,13 @@ class Page17 extends Component {
     render() { 
         let nextPage;
 
-        if (this.state.goesWest){
-            nextPage=<Page3/>;
+        if (this.state.goesSouth){
+            nextPage=<Page21/>;
         }
         else {
             nextPage=<div className="basic-container">
                 <div className="basic-header">
-                    <h1>Ruins of Naught</h1>
+                    <h1>Platinum City - Alley</h1>
                 </div>
 
                 <div className="basic-description">
@@ -37,7 +37,7 @@ class Page17 extends Component {
                 </div>
 
                 <div className="basic-buttons">
-                    <button name='west'onClick={this.handleDirection}>Go West</button>
+                    <button name='south'onClick={this.handleDirection}>Go South</button>
                   
                 </div>
             </div>
@@ -50,4 +50,4 @@ class Page17 extends Component {
     }
 }
  
-export default Page17;
+export default Page22;

@@ -1,0 +1,21 @@
+.basic-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1% 7% 1% 7%;
+    background-color: gray;
+}
+
+.basic-header{
+    grid-row: 1;
+}
+
+.basic-description{
+    grid-row: 2;
+}
+
+.basic-buttons{
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}

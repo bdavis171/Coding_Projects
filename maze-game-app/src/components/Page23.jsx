@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
+import Page21 from './Page21';
 import Page8 from './Page8';
-import Page6 from './Page6';
-import Page16 from './Page16';
-import Page20 from './Page20';
-import './city-style.css';
+import Page24 from './Page24';
 
-class Page7 extends Component {
+class Page5 extends Component {
     constructor(props) {
         super(props);
         this.state = {
             goesNorth: false,
             goesSouth: false,
-            goesEast: false,
             goesWest: false
         }
     }
@@ -21,64 +18,50 @@ class Page7 extends Component {
             this.setState({
                 goesNorth: true,
                 goesSouth: false,
-                goesWest: false,
-                goesEast: false
+                goesWest: false
             })
         }
         else if (event.target.name === 'south') {
             this.setState({
                 goesNorth: false,
                 goesSouth: true,
-                goesWest: false,
-                goesEast: false
+                goesWest: false
             })
         }
         else if (event.target.name === 'west') {
             this.setState({
                 goesNorth: false,
                 goesSouth: false,
-                goesWest: true,
-                goesEast: false
-            })
-        }
-        else if (event.target.name === 'east') {
-            this.setState({
-                goesNorth: false,
-                goesSouth: false,
-                goesWest: false,
-                goesEast: true
+                goesWest: true
             })
         }
     }
+
     render() {
         let nextPage;
 
         if (this.state.goesNorth) {
-            nextPage = <Page20 />;
+            nextPage = <Page24 />;
         }
         else if (this.state.goesSouth) {
-            nextPage = <Page16 />;
+            nextPage = <Page8 />;
         }
         else if (this.state.goesWest) {
-            nextPage = <Page6 />;
-        }
-        else if (this.state.goesEast){
-            nextPage = <Page8/>
+            nextPage = <Page21 />;
         }
         else {
             nextPage = <div className="basic-container">
                 <div className="basic-header">
-                    <h1>Platinum City - Forest Entrance</h1>
+                    <h1>Platinum City - Residential Area</h1>
                 </div>
 
                 <div className="basic-description">
-                    <p>You've arrived at a busy city with lights everywhere. A lady tells you about some ruins to the south, but warns you of a guardian protecting the entrance. You wonder if you'll find the mysterious figure there.</p>
+                    <p>You look around and admire the housing here. Most of them are two-floor houses. You look down the street and see a person looking in your direction. Should you walk up to them?</p>
                 </div>
 
                 <div className="basic-buttons">
                     <button name='north' onClick={this.handleDirection}>Go North</button>
                     <button name='south' onClick={this.handleDirection}>Go South</button>
-                    <button name='east' onClick={this.handleDirection}>Go East</button>
                     <button name='west' onClick={this.handleDirection}>Go West</button>
                 </div>
             </div>
@@ -91,4 +74,4 @@ class Page7 extends Component {
     }
 }
 
-export default Page7;
+export default Page5;

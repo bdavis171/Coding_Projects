@@ -20,7 +20,7 @@ class Page13 extends Component {
                 },
                 atk3: {
                     name: 'Spark Drive',
-                    min_dmg: 5,
+                    min_dmg: 8,
                     max_dmg: 19
                 }
             },

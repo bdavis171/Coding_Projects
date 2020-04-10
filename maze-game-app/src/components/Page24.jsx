@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Page5 from './Page5';
-import Page7 from './Page7';
+import Page23 from './Page23';
+import Page9 from './Page9';
 
-
-class Page19 extends Component {
+class Page24 extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -26,22 +25,22 @@ class Page19 extends Component {
                 }
             },
 
-            greatSunsetTree: {
+            maskedWoman: {
                 hp: 200,
                 atk1: {
-                    name: 'Nature Blitz',
-                    min_dmg: 6,
+                    name: 'Double Shot',
+                    min_dmg: 8,
                     max_dmg: 14
                 },
                 atk2: {
-                    name: 'Dawn Break Roots',
-                    min_dmg: 8,
-                    max_dmg: 13
+                    name: 'Armor Breaker',
+                    min_dmg: 10,
+                    max_dmg: 15
                 },
                 atk3: {
-                    name: 'Frenzied Forest',
-                    min_dmg: 10,
-                    max_dmg: 18
+                    name: 'Ultima Burst',
+                    min_dmg: 11,
+                    max_dmg: 20
                 },
             },
 
@@ -76,9 +75,9 @@ class Page19 extends Component {
             this.setState({
                 battleLog: this.state.battleLog
             })
-            this.state.greatSunsetTree.hp -= damageDealt;
+            this.state.maskedWoman.hp -= damageDealt;
             this.setState({
-                greatSunsetTree: this.state.greatSunsetTree
+                maskedWoman: this.state.maskedWoman
             })
 
             enemyAttackChance = Math.ceil(99 * Math.random() + 1);
@@ -88,8 +87,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk1.max_dmg - this.state.greatSunsetTree.atk1.min_dmg) * Math.random() + this.state.greatSunsetTree.atk1.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.maskedWoman.atk1.max_dmg - this.state.maskedWoman.atk1.min_dmg) * Math.random() + this.state.maskedWoman.atk1.min_dmg) * modifier);
+                logEntry = `The Masked Woman used ${this.state.maskedWoman.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -105,8 +104,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk2.max_dmg - this.state.greatSunsetTree.atk2.min_dmg) * Math.random() + this.state.greatSunsetTree.atk2.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.maskedWoman.atk2.max_dmg - this.state.maskedWoman.atk2.min_dmg) * Math.random() + this.state.maskedWoman.atk2.min_dmg) * modifier);
+                logEntry = `The Masked Woman used ${this.state.maskedWoman.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -122,8 +121,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk3.max_dmg - this.state.greatSunsetTree.atk3.min_dmg) * Math.random() + this.state.greatSunsetTree.atk3.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.maskedWoman.atk3.max_dmg - this.state.maskedWoman.atk3.min_dmg) * Math.random() + this.state.maskedWoman.atk3.min_dmg) * modifier);
+                logEntry = `The Masked Woman used ${this.state.maskedWoman.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -149,9 +148,9 @@ class Page19 extends Component {
             this.setState({
                 battleLog: this.state.battleLog
             })
-            this.state.greatSunsetTree.hp -= damageDealt;
+            this.state.maskedWoman.hp -= damageDealt;
             this.setState({
-                greatSunsetTree: this.state.greatSunsetTree
+                maskedWoman: this.state.maskedWoman
             })
 
             enemyAttackChance = Math.ceil(99 * Math.random() + 1);
@@ -161,8 +160,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk1.max_dmg - this.state.greatSunsetTree.atk1.min_dmg) * Math.random() + this.state.greatSunsetTree.atk1.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.maskedWoman.atk1.max_dmg - this.state.maskedWoman.atk1.min_dmg) * Math.random() + this.state.maskedWoman.atk1.min_dmg) * modifier);
+                logEntry = `The Masked Woman used ${this.state.maskedWoman.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -178,8 +177,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk2.max_dmg - this.state.greatSunsetTree.atk2.min_dmg) * Math.random() + this.state.greatSunsetTree.atk2.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.maskedWoman.atk2.max_dmg - this.state.maskedWoman.atk2.min_dmg) * Math.random() + this.state.maskedWoman.atk2.min_dmg) * modifier);
+                logEntry = `The Masked Woman used ${this.state.maskedWoman.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -195,8 +194,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk3.max_dmg - this.state.greatSunsetTree.atk3.min_dmg) * Math.random() + this.state.greatSunsetTree.atk3.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.maskedWoman.atk3.max_dmg - this.state.maskedWoman.atk3.min_dmg) * Math.random() + this.state.maskedWoman.atk3.min_dmg) * modifier);
+                logEntry = `The Masked Woman used ${this.state.maskedWoman.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -222,9 +221,9 @@ class Page19 extends Component {
             this.setState({
                 battleLog: this.state.battleLog
             })
-            this.state.greatSunsetTree.hp -= damageDealt;
+            this.state.maskedWoman.hp -= damageDealt;
             this.setState({
-                greatSunsetTree: this.state.greatSunsetTree
+                maskedWoman: this.state.maskedWoman
             })
 
             enemyAttackChance = Math.ceil(99 * Math.random() + 1);
@@ -234,8 +233,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk1.max_dmg - this.state.greatSunsetTree.atk1.min_dmg) * Math.random() + this.state.greatSunsetTree.atk1.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.maskedWoman.atk1.max_dmg - this.state.maskedWoman.atk1.min_dmg) * Math.random() + this.state.maskedWoman.atk1.min_dmg) * modifier);
+                logEntry = `The Masked Woman used ${this.state.maskedWoman.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -251,8 +250,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk2.max_dmg - this.state.greatSunsetTree.atk2.min_dmg) * Math.random() + this.state.greatSunsetTree.atk2.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.maskedWoman.atk2.max_dmg - this.state.maskedWoman.atk2.min_dmg) * Math.random() + this.state.maskedWoman.atk2.min_dmg) * modifier);
+                logEntry = `The Masked Woman used ${this.state.maskedWoman.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -268,8 +267,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk3.max_dmg - this.state.greatSunsetTree.atk3.min_dmg) * Math.random() + this.state.greatSunsetTree.atk3.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.maskedWoman.atk3.max_dmg - this.state.maskedWoman.atk3.min_dmg) * Math.random() + this.state.maskedWoman.atk3.min_dmg) * modifier);
+                logEntry = `The Masked Woman used ${this.state.maskedWoman.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -289,21 +288,21 @@ class Page19 extends Component {
         let nextPage;
         if (this.state.player.hp <= 0) {
             alert('You lose...');
-            nextPage = <Page5 />;
+            nextPage = <Page23 />;
         }
-        else if (this.state.greatSunsetTree.hp <= 0) {
+        else if (this.state.maskedWoman.hp <= 0) {
             alert('You win!!!');
-            nextPage = <Page7 />
+            nextPage = <Page9 />
         }
         else {
             nextPage = <div className='battle-container'>
 
                 <div className="battle-header">
-                <h1>Dawn Break Forest - Deep Forest</h1>
+                <h1>Platinum City - Residential Area</h1>
                 </div>
 
                 <div className="battle-description">
-                    <p>As you explore the forest, you come across a giant tree. The tree begins to speak to you, claiming that it knows why you have ventured into the labyrinth. The tree agrees to help you if you can defeat it.</p>
+                    <p>As you get closer to the person, you realize that they are a woman in a mask. You callout to her, but she doesn't respond. She pulls out two revolvers and points them at you, seemingly challenging you to a duel. Beating her may help you progress further, but she seems to give off an extremely dangerous aura. Be cautious.</p>
                 </div>
 
                 <div className="player-hp">
@@ -311,7 +310,7 @@ class Page19 extends Component {
                 </div>
 
                 <div className="enemy-hp">
-                    <h4>The Great Sunset Tree: {this.state.greatSunsetTree.hp}/200</h4>
+                    <h4>Masked Woman: {this.state.maskedWoman.hp}/200</h4>
                 </div>
 
                 <div className="battle-buttons">                    
@@ -342,4 +341,4 @@ class Page19 extends Component {
     }
 }
 
-export default Page19;
+export default Page24;

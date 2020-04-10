@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Page5 from './Page5';
-import Page7 from './Page7';
+import Page14 from './Page14';
+import Page16 from './Page16';
 
-
-class Page19 extends Component {
+class Page15 extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -26,20 +25,20 @@ class Page19 extends Component {
                 }
             },
 
-            greatSunsetTree: {
+            reaper: {
                 hp: 200,
                 atk1: {
-                    name: 'Nature Blitz',
-                    min_dmg: 6,
+                    name: 'Death Scythe',
+                    min_dmg: 10,
                     max_dmg: 14
                 },
                 atk2: {
-                    name: 'Dawn Break Roots',
-                    min_dmg: 8,
+                    name: 'Force Break',
+                    min_dmg: 9,
                     max_dmg: 13
                 },
                 atk3: {
-                    name: 'Frenzied Forest',
+                    name: 'Sigil of Death',
                     min_dmg: 10,
                     max_dmg: 18
                 },
@@ -76,9 +75,9 @@ class Page19 extends Component {
             this.setState({
                 battleLog: this.state.battleLog
             })
-            this.state.greatSunsetTree.hp -= damageDealt;
+            this.state.reaper.hp -= damageDealt;
             this.setState({
-                greatSunsetTree: this.state.greatSunsetTree
+                reaper: this.state.reaper
             })
 
             enemyAttackChance = Math.ceil(99 * Math.random() + 1);
@@ -88,8 +87,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk1.max_dmg - this.state.greatSunsetTree.atk1.min_dmg) * Math.random() + this.state.greatSunsetTree.atk1.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.reaper.atk1.max_dmg - this.state.reaper.atk1.min_dmg) * Math.random() + this.state.reaper.atk1.min_dmg) * modifier);
+                logEntry = `The Reaper used ${this.state.reaper.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -105,8 +104,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk2.max_dmg - this.state.greatSunsetTree.atk2.min_dmg) * Math.random() + this.state.greatSunsetTree.atk2.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.reaper.atk2.max_dmg - this.state.reaper.atk2.min_dmg) * Math.random() + this.state.reaper.atk2.min_dmg) * modifier);
+                logEntry = `The Reaper used ${this.state.reaper.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -122,8 +121,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk3.max_dmg - this.state.greatSunsetTree.atk3.min_dmg) * Math.random() + this.state.greatSunsetTree.atk3.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.reaper.atk3.max_dmg - this.state.reaper.atk3.min_dmg) * Math.random() + this.state.reaper.atk3.min_dmg) * modifier);
+                logEntry = `The Reaper used ${this.state.reaper.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -149,9 +148,9 @@ class Page19 extends Component {
             this.setState({
                 battleLog: this.state.battleLog
             })
-            this.state.greatSunsetTree.hp -= damageDealt;
+            this.state.reaper.hp -= damageDealt;
             this.setState({
-                greatSunsetTree: this.state.greatSunsetTree
+                reaper: this.state.reaper
             })
 
             enemyAttackChance = Math.ceil(99 * Math.random() + 1);
@@ -161,8 +160,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk1.max_dmg - this.state.greatSunsetTree.atk1.min_dmg) * Math.random() + this.state.greatSunsetTree.atk1.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.reaper.atk1.max_dmg - this.state.reaper.atk1.min_dmg) * Math.random() + this.state.reaper.atk1.min_dmg) * modifier);
+                logEntry = `The Reaper used ${this.state.reaper.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -178,8 +177,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk2.max_dmg - this.state.greatSunsetTree.atk2.min_dmg) * Math.random() + this.state.greatSunsetTree.atk2.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.reaper.atk2.max_dmg - this.state.reaper.atk2.min_dmg) * Math.random() + this.state.reaper.atk2.min_dmg) * modifier);
+                logEntry = `The Reaper used ${this.state.reaper.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -195,8 +194,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk3.max_dmg - this.state.greatSunsetTree.atk3.min_dmg) * Math.random() + this.state.greatSunsetTree.atk3.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.reaper.atk3.max_dmg - this.state.reaper.atk3.min_dmg) * Math.random() + this.state.reaper.atk3.min_dmg) * modifier);
+                logEntry = `The Reaper used ${this.state.reaper.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -222,9 +221,9 @@ class Page19 extends Component {
             this.setState({
                 battleLog: this.state.battleLog
             })
-            this.state.greatSunsetTree.hp -= damageDealt;
+            this.state.reaper.hp -= damageDealt;
             this.setState({
-                greatSunsetTree: this.state.greatSunsetTree
+                reaper: this.state.reaper
             })
 
             enemyAttackChance = Math.ceil(99 * Math.random() + 1);
@@ -234,8 +233,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk1.max_dmg - this.state.greatSunsetTree.atk1.min_dmg) * Math.random() + this.state.greatSunsetTree.atk1.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.reaper.atk1.max_dmg - this.state.reaper.atk1.min_dmg) * Math.random() + this.state.reaper.atk1.min_dmg) * modifier);
+                logEntry = `The Reaper used ${this.state.reaper.atk1.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -251,8 +250,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk2.max_dmg - this.state.greatSunsetTree.atk2.min_dmg) * Math.random() + this.state.greatSunsetTree.atk2.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.reaper.atk2.max_dmg - this.state.reaper.atk2.min_dmg) * Math.random() + this.state.reaper.atk2.min_dmg) * modifier);
+                logEntry = `The Reaper used ${this.state.reaper.atk2.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -268,8 +267,8 @@ class Page19 extends Component {
                     modifier = this.state.criticalModfier;
                     criticalMessage = 'It was a critical hit!';
                 }
-                damageReceived = Math.ceil(((this.state.greatSunsetTree.atk3.max_dmg - this.state.greatSunsetTree.atk3.min_dmg) * Math.random() + this.state.greatSunsetTree.atk3.min_dmg) * modifier);
-                logEntry = `The Great Sunset Forest used ${this.state.greatSunsetTree.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
+                damageReceived = Math.ceil(((this.state.reaper.atk3.max_dmg - this.state.reaper.atk3.min_dmg) * Math.random() + this.state.reaper.atk3.min_dmg) * modifier);
+                logEntry = `The Reaper used ${this.state.reaper.atk3.name}! ${criticalMessage} Dealt ${damageReceived} damage!`;
                 this.state.battleLog.push(logEntry);
                 this.setState({
                     battleLog: this.state.battleLog
@@ -289,21 +288,21 @@ class Page19 extends Component {
         let nextPage;
         if (this.state.player.hp <= 0) {
             alert('You lose...');
-            nextPage = <Page5 />;
+            nextPage = <Page14 />;
         }
-        else if (this.state.greatSunsetTree.hp <= 0) {
+        else if (this.state.reaper.hp <= 0) {
             alert('You win!!!');
-            nextPage = <Page7 />
+            nextPage = <Page16 />
         }
         else {
             nextPage = <div className='battle-container'>
 
                 <div className="battle-header">
-                <h1>Dawn Break Forest - Deep Forest</h1>
+                <h1>Dawn Break Forest - Field</h1>
                 </div>
 
                 <div className="battle-description">
-                    <p>As you explore the forest, you come across a giant tree. The tree begins to speak to you, claiming that it knows why you have ventured into the labyrinth. The tree agrees to help you if you can defeat it.</p>
+                    <p>Night begins to creep on you. You feel a sudden chill down you spine. A blade is swong at you as you barely dodge it. A Reaper blocks your path. You should defeat it quickly, though you don't have a soul for it to claim.</p>
                 </div>
 
                 <div className="player-hp">
@@ -311,7 +310,7 @@ class Page19 extends Component {
                 </div>
 
                 <div className="enemy-hp">
-                    <h4>The Great Sunset Tree: {this.state.greatSunsetTree.hp}/200</h4>
+                    <h4>Reaper: {this.state.reaper.hp}/200</h4>
                 </div>
 
                 <div className="battle-buttons">                    
@@ -342,4 +341,4 @@ class Page19 extends Component {
     }
 }
 
-export default Page19;
+export default Page15;

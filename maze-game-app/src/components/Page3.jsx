@@ -61,7 +61,7 @@ class Page3 extends Component {
                     <p>You look around the forest, realizing that the sun has begun to set.</p>
                 </div>
 
-                <div className="basic-container">
+                <div className="basic-buttons">
                     <button name='north' onClick={this.handleDirection}>Go North</button>
                     <button name='south' onClick={this.handleDirection}>Go South</button>
                     <button name='east' onClick={this.handleDirection}>Go East</button>

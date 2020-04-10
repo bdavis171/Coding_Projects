@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Page2 from './Page2';
 import Page14 from './Page14';
+import './forest-style.css';
 
 
 class Page1 extends Component {
