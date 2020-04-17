@@ -1,4 +1,5 @@
 module.exports = [
+    // Baby
     {
         "name":"Botamon",
         "generation":"Baby",
@@ -46,6 +47,16 @@ module.exports = [
         "img":"/yukimibotamon.jpg"
     },
     {
+        "name":"Chibomon",
+        "generation":"Baby",
+        "attribute":"Free",
+        "priorForm":"N/A",
+        "nextForm":"DemiVeemon",
+        "description":"Chibomon is a Slime Digimon, and as such it is small and young. It is a small, blue-colored, Dragon Digimon child, and although it is small and powerless, it has the potential to digivolve to every Dragon Digimon. For that reason, it is a Digimon that is considered exceedingly valuable by tamers and researchers of Dragon Digimon. It is cherished due to its personality of friendliness and overflowing curiosity, characteristic of Fresh Digimon. Just like other Fresh Digimon, it spits acidic bubbles to attack, but as usual, their power is nonexistent.",
+        "img":"/chibomon.jpg"
+    },
+    // In-Training
+    {
         "name":"Koromon",
         "generation":"In-Training",
         "attribute":"Free",
@@ -90,6 +101,16 @@ module.exports = [
         "description":"Nyaromon is a Lesser Digimon. It is a tiny Digimon which has cat-like characteristics. It is always capricious, and that behavior seems to have been attached to Nyaromon as a result of its being like a 'cat'. Although it is sometimes frivolous due to its overflowing curiosity, it also has a lonely side.",
         "img":"/nyaromon.jpg"
     },
+    {
+        "name":"DemiVeemon",
+        "generation":"In-Training",
+        "attribute":"Free",
+        "priorForm":"Chibomon",
+        "nextForm":"Veemon",
+        "description":"DemiVeemon is a Baby Dragon Digimon. It digivolved from Chibomon. Unusually for an In-Training Digimon, it possesses a body, hands, and feet, and so is able to grip objects with both of its small hands, and move while hopping about with both feet. As it is very voracious, it especially likes sweet foods. Also, as it is very fond of sleeping, if you take your eyes off of it, it will instantly fall asleep.",
+        "img":"/demiveemon.jpg"
+    },
+    // Child
     {
         "name":"Agumon",
         "generation":"Child",
@@ -136,6 +157,16 @@ module.exports = [
         "img":"/salamon.jpg"
     },
     {
+        "name":"Veemon",
+        "generation":"Child",
+        "attribute":"Free",
+        "priorForm":"DemiVeemon",
+        "nextForm":"ExVeemon",
+        "description":"Veemon is a Dragon Digimon. It is a new species of Digimon that was discovered recently. As a survivor of a species that flourished in the Genesis of the Digital World, it is able to perform 'Armor Digivolution', a 'pseudo-digivolution' using the Digi-Eggs. Among others, Veemon is an excellent Combat Species, as it possesses hidden power, and demonstrates tremendous abilities by Armor Digivolving. Although it has a mischievous, prank-loving personality, it has another side with a strong sense of justice.",
+        "img":"/veemon.jpg"
+    },
+    // Adult
+    {
         "name":"Greymon",
         "generation":"Adult",
         "attribute":"Vaccine",
@@ -180,6 +211,16 @@ module.exports = [
         "description":"Gatomon is an Animal Digimon. It has a very healthy curiosity, so it loves pranks. Although its body is small, it is a precious Holy-species Digimon, and its appearance does not match the true strength it possesses. It wears a Holy Ring on its tail, but if it is lost, its power is decreased and it can no longer exhibit its original power. In order to defend itself, it wears long claws copied from SaberLeomon's data. Even though Gatomon is not a descendant of an ancient species, it became able to Armor digivolve by awakening the special abilities that slept within its composition data.",
         "img":"/gatomon.jpg"
     },
+    {
+        "name":"ExVeemon",
+        "generation":"Adult",
+        "attribute":"Free",
+        "priorForm":"Veemon",
+        "nextForm":"Paildramon",
+        "description":"ExVeemon is a Mythical Dragon Digimon. It attained Veemon's natural power and digivolved. ExVeemon is a purebreed of Veedramon, and it is said that the variant species is Veedramon. The attacks it unleashes through its developed arm and leg strength are tremendous, and are powerful enough to destroy a mountain of rock without leaving a trace. It is feared because it possesses such destructive power, but in reality, it has a strong sense of justice, and will not use that power recklessly.",
+        "img":"/exveemon.jpg"
+    },
+    // Perfect
     {
         "name":"MetalGreymon",
         "generation":"Perfect",
@@ -226,6 +267,16 @@ module.exports = [
         "img":"/angewomon.jpg"
     },
     {
+        "name":"Paildramon",
+        "generation":"Perfect",
+        "attribute":"Free",
+        "priorForm":"ExVeemon",
+        "nextForm":"Imperialdramon",
+        "description":"Paildramon is a Dragon Digimon. It is the DNA digivolved form of ExVeemon and Stingmon. It has the power of a dragon and the defense of an insect. However, it looks more like a dragon than an insect. It agilely finishes off its enemies and would die for its master.",
+        "img":"/paildramon.jpg"
+    },
+    // Ultimate
+    {
         "name":"WarGreymon",
         "generation":"Ultimate",
         "attribute":"Vaccine",
@@ -269,6 +320,15 @@ module.exports = [
         "nextForm":"N/A",
         "description":"Ophanimon is an Angel Digimon. As one of the 'Celestial Digimon', it is a Holy Mother-like being who imparts the loving and merciful side of God. It is the final form of feminine Angel Digimon. It was responsible for banishing the former Angel-species Cho-Hakkaimon from heaven for an unspecified crime,[8] but it's also thought that Laylamon, who fell from heaven and became known as the 'Goddess of Darkness', was itself originally an Ophanimon.",
         "img":"/ophanimon.jpg"
+    },
+    {
+        "name":"Imperialdramon Dragon Mode",
+        "generation":"Ultimate",
+        "attribute":"Free",
+        "priorForm":"Paildramon",
+        "nextForm":"N/A",
+        "description":"Imperialdramon Dragon Mode is an Ancient Dragon Digimon. It is an ultimate Digimon that existed in ancient times. There is a clear distinction between it and other Digimon in terms of existence or ability. Also, Imperialdramon is called the Dragon Mode, but there seems to exist a 'Fighter Mode' (竜人形態ファイターモード Ryuujin KeitaiFaitā Mōdo?, lit. 'Dragon Man Form') that is able to liberate all of its power. However, it is said that that form has never been seen. Due to its immense power, controlling it is next to impossible, and depending on how it is raised, it may become a savior or a god of destruction. It wields the 'Positron Laser' on its back.",
+        "img":"/imperialdramonDM.jpg"
     }
 
 ]
